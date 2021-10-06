@@ -2,12 +2,12 @@
 
 one:
   line: MyString
-  name: MyString
-  walk: 1
+  nearest_station: MyString
+  on_foot: 1
   property: one
 
 two:
   line: MyString
-  name: MyString
-  walk: 1
+  nearest_station: MyString
+  on_foot: 1
   property: two

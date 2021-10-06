@@ -1,0 +1,11 @@
+<table>
+<% @property.each do |property| %>
+  <tr>
+    <td><p>物件名: <%= property.name %></p></td>
+    <td><p>賃料: <%= property.rent %></td>
+    <td><p>住所: <%= property.address %></td>
+    <td><p>築年数: <%= property.age %></td>
+    <td><p>備考: <%= property.remarks %></td>
+    <td><%= link_to '詳細を確認する', property_path(property.id) %></td>
+  </tr>
+<% end %>

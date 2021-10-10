@@ -21,20 +21,7 @@
     <%= form.text_field :remarks %>
   </div>
   <%= form.fields_for :stations do |s| %>
-    <strong>最寄り駅1</strong>
-    <div class="station_line">
-      <%= s.label :line %>
-      <%= s.text_field :line %>
-    </div>
-    <div class="station_nearest_station">
-      <%= s.label :nearest_station %>
-      <%= s.text_field :nearest_station %>
-    </div>
-    <div class="station_on_foot">
-      <%= s.label :on_foot %>
-      <%= s.text_field :on_foot %>
-    </div>
-    <strong>最寄り駅2</strong>
+  <strong>最寄り駅1</strong><strong>最寄り駅2</strong>
     <div class="station_line">
       <%= s.label :line %>
       <%= s.text_field :line %>

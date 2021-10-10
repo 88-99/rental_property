@@ -1,18 +1,18 @@
 <table>
-<% @property.each do |property| %>
+<% @property.each do |p| %>
   <tr>
-    <td><p>物件名: <%= property.name %></p></td>
-    <td><p>賃料: <%= property.rent %></td>
-    <td><p>住所: <%= property.address %></td>
-    <td><p>築年数: <%= property.age %></td>
-    <td><p>備考: <%= property.remarks %></td>
+    <td><p>物件名: <%= p.name %></p></td>
+    <td><p>賃料: <%= p.rent %></td>
+    <td><p>住所: <%= p.address %></td>
+    <td><p>築年数: <%= p.age %></td>
+    <td><p>備考: <%= p.remarks %></td>
   </tr>
 <% end %>
-<% @station.each do |station| %>
+<% @property.stations.each do |s| %>
   <tr>
-    <td><p>路線名: <%= station.line %></p></td>
-    <td><p>駅名: <%= station.nearest_station %></td>
-    <td><p>徒歩分数: <%= station.on_foot %></td>
+    <td><p>路線名: <%= s.line %></p></td>
+    <td><p>駅名: <%= s.nearest_station %></td>
+    <td><p>徒歩分数: <%= s.on_foot %></td>
   </tr>
 <% end %>
 <%= link_to '編集', property_path(property.id) %>

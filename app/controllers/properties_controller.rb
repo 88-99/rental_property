@@ -19,7 +19,6 @@ class PropertiesController < ApplicationController
   end
 
   def show
-    @property
     @stations = @property.stations
   end
 

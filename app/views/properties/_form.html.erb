@@ -1,4 +1,10 @@
 <%= form_with(model: @property, local: true) do |form| %>
+<% if @property.errors.any? %>
+      <h2><%= pluralize(@property.errors.count, "つのエラーがあります。") %></h2>
+        <% @property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+<% end %>
   <div class="name">
     <%= form.label :name %>
     <%= form.text_field :name %>

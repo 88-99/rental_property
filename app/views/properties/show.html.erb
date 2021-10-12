@@ -9,7 +9,11 @@
 <% @stations.each_with_index do |s, i| %>
   <% if @property.stations.any? %>
     <tr>
-      <td><p>最寄り駅<%= "#{i+1}" %></p></td>
+      <td>
+        <strong>
+          最寄り駅<%= "#{i+1}" %>
+        </strong>
+      </td>
       <td><p>路線名: <%= s.line %></p></td>
       <td><p>駅名: <%= s.nearest_station %></p></td>
       <td><p>徒歩分数: <%= s.on_foot %>分</p></td>

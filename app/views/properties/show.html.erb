@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <td><p>物件名: <%= @property.name %></p></td>
+    <td><p>賃料: <%= @property.rent %><br>円</p></td>
+    <td><p>住所: <%= @property.address %></p></td>
+    <td><p>築年数: <%= @property.age %><br>年</p></td>
+    <td><p>備考: <%= @property.remarks %></p></td>
+  </tr>
+<% @stations.each_with_index do |s, i| %>
+  <% if @property.stations.any? %>
+    <tr>
+      <td>
+        <strong>
+          最寄り駅<%= "#{i+1}" %>
+        </strong>
+      </td>
+      <td><p>路線名: <%= s.line %></p></td>
+      <td><p>駅名: <%= s.nearest_station %></p></td>
+      <td><p>徒歩分数: <%= s.on_foot %>分</p></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>
+<%= link_to '編集', edit_property_path(@property.id) %>
+<%= link_to '戻る', properties_path %>
